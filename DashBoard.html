@@ -11,15 +11,25 @@
     </title>
 
     <!-- If you are using CSS version, only link these 2 files, you may add app.css to use for your overrides if you like. -->
-    <link rel="stylesheet" href="file:///E|/Projet 2014/leboncoin/Maquette/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+     <link rel="stylesheet" href="bootstrap.css">
 
     <!-- If you are using the gem version, you need this only -->
     <link rel="stylesheet" href="/static/css/app.css">
 
     <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/jquery.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="/static/js/holder.js"></script>
 </head>
 <body>
 <div id="body">
+
+<div class="jumbotron">
+  <h1>Back end</h1>
+  <p>Description :This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+</div>
+
     
     <nav class="navbar navbar-main" role="navigation">
         <div class="container-fluid">
@@ -31,7 +41,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#"><img src="/static/img/logo.png" alt="Buy&Sell"/></a>
+              <a class="navbar-brand" href="#"><img src="logo.png" alt="Buy&Sell"/></a>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -66,30 +76,95 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="#">Tableau de bord</a>
-    <a class="navbar-brand" href="#">Catalogue</a>
-    <a class="navbar-brand" href="#">Systéme</a>
-    <a class="navbar-brand" href="#">Repports</a>
-    
-      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-        Dropdown
-        <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu">
-        <li><a href="#">Dropdown link</a></li>
-        <li><a href="#">Dropdown link</a></li>
-        <li><a href="#">Dropdown link</a></li>
-       </ul>
-   
+    <a class="navbar-brand" href="#">Tableau de bord </a>
+    <a class="navbar-brand" href="#">Catalogue </a>
+    <a class="navbar-brand" href="#">Rapports </a>
+     <a class="navbar-brand" href="#">System </a>
+  </div>
+  <div class="navbar-collapse collapse navbar-responsive-collapse">
+    <ul class="nav navbar-nav">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Client <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li class="dropdown-header">Dropdown header</li>
+          <li><a href="#">Separated link</a></li>
+          <li><a href="#">One more separated link</a></li>
+        </ul>
+      </li>
+    </ul>
     
   </div>
-   
 </div>
+
+
+<!-- bloc à gauche -->
+<div class="col-lg-3">
+  <div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Le nombre de nouveaux utilisateurs</h3>
+  </div>
+  <div class="panel-body">
+    600.000
+  </div>
+ </div>
+
+  <div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Le nombre de nouvelles annonces</h3>
+  </div>
+  <div class="panel-body">
+    600.000
+  </div>
+ </div>
+ 
+  <div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Le nombre total d’utilisateur</h3>
+  </div>
+  <div class="panel-body">
+    600.000
+  </div>
+ </div>
+
+  <div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Le nombre total d’annonces</h3>
+  </div>
+  <div class="panel-body">
+    600.000
+  </div>
+ </div>
+</div>
+<!-- bloc à gauche -->
+
+
+<!-- bloc à droite --> 
+<div class="col-lg-6">
+<ul class="nav nav-tabs" style="margin-bottom: 15px;">
+  <li class="active"><a href="#utilisateurs" data-toggle="tab">Utilisteurs</a></li>
+  <li><a href="#Annonces" data-toggle="tab">Annonces</a></li>
+  
+</ul>
+<div id="myTabContent" class="tab-content">
+  <div class="tab-pane fade active in" id="home">
+    <img src="graphe.png" alt="graphe">
+    
+  </div>
+  <div class="tab-pane fade" id="profile">
+    <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+  </div>
+ 
+</div>
+</div>
+
+
 <!-- Javascript -->
 
-<script src="/static/js/jquery.js"></script>
-<script src="/static/js/bootstrap.min.js"></script>
-<script src="/static/js/holder.js"></script>
+
 
 <script type="text/javascript">
     $(".dropdown-menu li a").click(function(){
