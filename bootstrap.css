@@ -5782,4 +5782,52 @@ button.close {
     display: none !important;
   }
 }
+
+.progress_steps {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: 3px solid #F3694C;
+    display: block;
+    height: 24px;
+    line-height: 32px;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+.progress_steps a {
+    color: #000000;
+    display: inline;
+    font-weight: normal;
+    overflow: hidden;
+}
+.progress_steps a span {
+    color: #9B9FA0;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 35px;
+    position: relative;
+}
+.progress_steps a:hover, .progress_steps a:hover span {
+    text-decoration: none;
+}
+.progress_steps a.active span {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #F36A4C;
+}
+.progress_steps i, .progress_steps span {
+    float: left;
+}
+.progress_steps .step_number {
+    font-family: arial;
+    font-size: 15px;
+    left: 15px;
+    line-height: 22px;
+    padding: 2px 5px 0;
+    position: absolute;
+    text-align: center;
+    top: 3px;
+    width: 16px;
+}
+.progress_steps span {
+    padding-right: 8px;
+}
+
 /*# sourceMappingURL=bootstrap.css.map */
