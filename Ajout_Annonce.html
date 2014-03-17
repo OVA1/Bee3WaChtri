@@ -13,15 +13,14 @@
     <!-- If you are using CSS version, only link these 2 files, you may add app.css to use for your overrides if you like. -->
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="my_css.css">
+     <link rel="stylesheet" href="my_css_common.css">
 
     <!-- If you are using the gem version, you need this only -->
     <link rel="stylesheet" href="app.css">
 
 
 <link href="bootstrap-theme.css" rel="stylesheet" type="text/css">
-
-</head>
-<body>
 <div id="body">
     
     <nav class="navbar navbar-main" role="navigation">
@@ -60,83 +59,1773 @@
 </div>
 
 
+<hr/>
+</head>
+
+
+<body>
+
 
 <!-- Form -->
-<div class="col-lg-10">
-<form class="form-horizontal">
-  <fieldset>
-    <legend>Legend</legend>
-    <div class="form-group">
-      <label for="inputEmail" class="col-lg-2 control-label">Email</label>
-      <div class="col-lg-10">
-        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="inputPassword" class="col-lg-2 control-label">Password</label>
-      <div class="col-lg-10">
-        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-        <div class="checkbox">
-          <label>
-            <input type="checkbox"> Checkbox
-          </label>
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="textArea" class="col-lg-2 control-label">Textarea</label>
-      <div class="col-lg-10">
-        <textarea class="form-control" rows="3" id="textArea"></textarea>
-        <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="col-lg-2 control-label">Radios</label>
-      <div class="col-lg-10">
-        <div class="radio">
-          <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-            Option one is this
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-            Option two can be something else
-          </label>
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="select" class="col-lg-2 control-label">Selects</label>
-      <div class="col-lg-10">
-        <select class="form-control" id="select">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-        <br>
-        <select multiple="" class="form-control">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-lg-10 col-lg-offset-2">
-        <button class="btn btn-default">Cancel</button>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </div>
-    </div>
-  </fieldset>
-</form>
+
+<section class="widecolumn">
+<div class="progress_steps">
+    
+      <a href="#" class="active">
+        <span>&nbsp;&nbsp;Créez votre annonce<i class="sprite_ai_ai_step_active step_number">1</i></span>
+        <!--  <i class="sprite_ai_ai_step_arrow_l"></i> -->
+      </a><a href="#" onClick="showProgressBar('loading_top');document.formular.submit();">
+        <span>&nbsp;&nbsp;C’est fini !<i class="sprite_ai_ai_step_inactive step_number">2</i></span>
+        <!-- <i class="sprite_ai_ai_step_arrow"></i> -->
+      </a>
+    
+    
+      <div id="loading_top" class="progressBar hidden"><span>Patienter<span id="loading_top_dots"></span></span></div>
+    
+  </div>
+
+
+          <div class="form_container">
+            
+            
+            
+            
+            
+              
+                
+              
+            
+            <div id="err_cleared_by" class="error_label" style="display: none">
+  <span class="msg_warning nohistory"></span>
+</div>
+
+            
+            
+            <input name="check_type_diff" id="check_type_diff" value="1" type="hidden" />
+            
+
+
+            
+            
+            <div class="form">
+              
+                
+                  <!-- heading: NEWAD_HEADING_AD_DETAILS -->
+                  <h2 class="newadheading">
+                    Votre annonce
+                  </h2>
+                
+                
+                  <!-- template: category -->
+                  
+<div class="row input" >
+<div class="col_left">
+
+<label for="category_group">Catégorie&nbsp;:</label>
+
+
 
 </div>
+<div class="col_right">
+
+
+
+
+<div class="selectbox">
+<select name="category_group" id="category_group"  >
+<option value="0" selected="selected">&laquo;Catégorie&raquo;</option>
+
+<option value="5000" style="background-color:#dcdcc3;font-weight:bold;" disabled="disabled" id="cat5000" >
+
+-- INFORMATIQUE ET MULTIMEDIA --
+        
+</option> 
+
+<option value="5010"  id="cat5010" >
+
+Téléphones
+
+</option> 
+
+<option value="5080"  id="cat5080" >
+
+Tablettes
+
+</option> 
+
+<option value="5030"  id="cat5030" >
+
+Ordinateurs portables
+
+</option> 
+
+<option value="5050"  id="cat5050" >
+
+Ordinateurs de bureau
+
+</option> 
+
+<option value="5060"  id="cat5060" >
+
+Accessoires informatique et Gadgets
+
+</option> 
+
+<option value="5040"  id="cat5040" >
+
+Jeux vidéo et Consoles
+
+</option> 
+
+<option value="5070"  id="cat5070" >
+
+Appareils photo et Caméras
+
+</option> 
+
+<option value="5090"  id="cat5090" >
+
+Télévisions
+
+</option> 
+
+<option value="5020"  id="cat5020" >
+
+Image & Son
+
+</option> 
+
+<option value="2000" style="background-color:#dcdcc3;font-weight:bold;" disabled="disabled" id="cat2000" >
+
+-- VEHICULES --
+        
+</option> 
+
+<option value="2010"  id="cat2010" >
+
+Voitures
+
+</option> 
+
+<option value="2030"  id="cat2030" >
+
+Motos
+
+</option> 
+
+<option value="2060"  id="cat2060" >
+
+Vélos
+
+</option> 
+
+<option value="2070"  id="cat2070" >
+
+Véhicules Professionnels
+
+</option> 
+
+<option value="2050"  id="cat2050" >
+
+Bateaux
+
+</option> 
+
+<option value="2040"  id="cat2040" >
+
+Pièces et Accessoires pour véhicules
+
+</option> 
+
+<option value="1000" style="background-color:#dcdcc3;font-weight:bold;" disabled="disabled" id="cat1000" >
+
+-- IMMOBILIER --
+        
+</option> 
+
+<option value="1010"  id="cat1010" >
+
+Appartements
+
+</option> 
+
+<option value="1020"  id="cat1020" >
+
+Maisons et Villas
+
+</option> 
+
+<option value="1050"  id="cat1050" >
+
+Bureaux et Plateaux
+
+</option> 
+
+<option value="1060"  id="cat1060" >
+
+Magasins et Commerces
+
+</option> 
+
+<option value="1080"  id="cat1080" >
+
+Terrains et Fermes
+
+</option> 
+
+<option value="1030"  id="cat1030" >
+
+Locations de vacances
+
+</option> 
+
+<option value="1100"  id="cat1100" >
+
+Colocations
+
+</option> 
+
+<option value="1090"  id="cat1090" >
+
+Autre Immobilier
+
+</option> 
+
+<option value="3000" style="background-color:#dcdcc3;font-weight:bold;" disabled="disabled" id="cat3000" >
+
+-- POUR LA MAISON ET JARDIN --
+        
+</option> 
+
+<option value="3010"  id="cat3010" >
+
+Electroménager et Vaisselles
+
+</option> 
+
+<option value="3020"  id="cat3020" >
+
+Meubles et Décoration
+
+</option> 
+
+<option value="3040"  id="cat3040" >
+
+Jardin et Outils de bricolage
+
+</option> 
+
+<option value="8000" style="background-color:#dcdcc3;font-weight:bold;" disabled="disabled" id="cat8000" >
+
+-- HABILLEMENT ET BIEN ETRE --
+        
+</option> 
+
+<option value="3050"  id="cat3050" >
+
+Vêtements
+
+</option> 
+
+<option value="3150"  id="cat3150" >
+
+Chaussures
+
+</option> 
+
+<option value="3160"  id="cat3160" >
+
+Montres et Bijoux
+
+</option> 
+
+<option value="3060"  id="cat3060" >
+
+Sacs et Accessoires
+
+</option> 
+
+<option value="3030"  id="cat3030" >
+
+Vêtements pour enfant et bébé
+
+</option> 
+
+<option value="3130"  id="cat3130" >
+
+Equipements pour enfant et bébé
+
+</option> 
+
+<option value="3070"  id="cat3070" >
+
+Produits de beauté
+
+</option> 
+
+<option value="4000" style="background-color:#dcdcc3;font-weight:bold;" disabled="disabled" id="cat4000" >
+
+-- LOISIRS ET DIVERTISSEMENT --
+        
+</option> 
+
+<option value="4010"  id="cat4010" >
+
+Sports et Loisirs
+
+</option> 
+
+<option value="4030"  id="cat4030" >
+
+Animaux
+
+</option> 
+
+<option value="4070"  id="cat4070" >
+
+Instruments de Musique
+
+</option> 
+
+<option value="4060"  id="cat4060" >
+
+Art et Collections
+
+</option> 
+
+<option value="4050"  id="cat4050" >
+
+Voyages et Billetterie
+
+</option> 
+
+<option value="4040"  id="cat4040" >
+
+Films, Livres, Magazines
+
+</option> 
+
+<option value="6000" style="background-color:#dcdcc3;font-weight:bold;" disabled="disabled" id="cat6000" >
+
+-- EMPLOI ET SERVICES --
+        
+</option> 
+
+<option value="6010"  id="cat6010" >
+
+Offres d'emploi
+
+</option> 
+
+<option value="6020"  id="cat6020" >
+
+Demandes d'emploi
+
+</option> 
+
+<option value="6130"  id="cat6130" >
+
+Stages
+
+</option> 
+
+<option value="6030"  id="cat6030" >
+
+Services
+
+</option> 
+
+<option value="6040"  id="cat6040" >
+
+Cours et Formations
+
+</option> 
+
+<option value="9000" style="background-color:#dcdcc3;font-weight:bold;" disabled="disabled" id="cat9000" >
+
+-- ENTREPRISES --
+        
+</option> 
+
+<option value="6100"  id="cat6100" >
+
+Business et Affaires commerciales
+
+</option> 
+
+<option value="6090"  id="cat6090" >
+
+Matériels Professionnels
+
+</option> 
+
+<option value="6120"  id="cat6120" >
+
+Stocks et Vente en gros
+
+</option> 
+
+<option value="7000" style="background-color:#dcdcc3;font-weight:bold;" disabled="disabled" id="cat7000" >
+
+--  --
+        
+</option> 
+
+<option value="7010"  id="cat7010" >
+
+AUTRES
+
+</option> 
+
+</select>
+</div>
+<div class="selectbox sub_category hidden" id="sub_category">
+<select id="sub_category_drop" class="sub_category_drop" name="sub_category" >
+<option value="0" selected="selected">&laquo;Toutes les catégories&raquo;</option>
+
+</select>
+</div>
+
+<div id="err_category" class="error_label" style="display: none">
+<span class="msg_warning nohistory"></span>
+</div>
+
+
+
+</div>
+</div>
+                
+                
+                
+                  <!-- template: type -->
+                  
+<div class="row " id="type_container">
+<div class="col_left">
+
+<label>Type d'annonce&nbsp;:</label>
+
+
+
+</div>
+<div class="col_right">
+ <input id="rs" type="radio" name="type" value="s" checked="checked"/>
+<label for="rs" class="radio">Offre (vous vendez un bien)</label>
+
+<input id="rk" type="radio" name="type" value="k" />
+<label for="rk" class="radio">Demande (vous recherchez un bien)</label>
+
+
+
+
+</div>
+</div>
+
+                
+                
+                
+                  <!-- template: multilanguage -->
+                  
+    <input type="hidden" name="lang" value="fr" />
+    
+
+
+                
+                
+                  <!-- param: brand -->
+                     <div class="row input js-param js-brand hidden " >
+<div class="col_left">
+
+<label for="brand">Marque&nbsp;:</label>
+
+
+
+</div>
+<div class="col_right">
+<div class="selectbox">
+<select name="brand" id="brand">
+<option value="">&#171; marque&#187;</option>
+<option value="1" >
+Alfa Romeo
+</option>
+<option value="2" >
+Aston Martin
+</option>
+<option value="3" >
+Audi
+</option>
+<option value="4" >
+Bentley
+</option>
+<option value="5" >
+BMW
+</option>
+<option value="6" >
+BYD
+</option>
+<option value="7" >
+Cadillac
+</option>
+<option value="8" >
+Changhe
+</option>
+<option value="9" >
+Chery
+</option>
+<option value="10" >
+Chevrolet
+</option>
+<option value="11" >
+Chrysler
+</option>
+<option value="12" >
+Citroen
+</option>
+<option value="13" >
+Dacia
+</option>
+<option value="14" >
+Daihatsu
+</option>
+<option value="15" >
+Dodge
+</option>
+<option value="16" >
+Ferrari
+</option>
+<option value="17" >
+Fiat
+</option>
+<option value="18" >
+Ford
+</option>
+<option value="19" >
+Foton
+</option>
+<option value="20" >
+Geely
+</option>
+<option value="21" >
+GMC
+</option>
+<option value="22" >
+Honda
+</option>
+<option value="23" >
+Hummer
+</option>
+<option value="24" >
+Hyundai
+</option>
+<option value="25" >
+Infiniti
+</option>
+<option value="26" >
+Isuzu
+</option>
+<option value="27" >
+Iveco
+</option>
+<option value="28" >
+Jaguar
+</option>
+<option value="29" >
+Jeep
+</option>
+<option value="30" >
+Kia
+</option>
+<option value="31" >
+Lamborghini
+</option>
+<option value="32" >
+lancia
+</option>
+<option value="33" >
+Land Rover
+</option>
+<option value="34" >
+Lexus
+</option>
+<option value="35" >
+Lincoln
+</option>
+<option value="36" >
+Mahindra
+</option>
+<option value="37" >
+Man
+</option>
+<option value="38" >
+Maserati
+</option>
+<option value="39" >
+Masey Ferguson
+</option>
+<option value="40" >
+Mazda
+</option>
+<option value="41" >
+Mercedes-Benz
+</option>
+<option value="42" >
+mini
+</option>
+<option value="43" >
+Mitsubishi
+</option>
+<option value="44" >
+Nissan
+</option>
+<option value="45" >
+Opel
+</option>
+<option value="46" >
+Peugeot
+</option>
+<option value="47" >
+Pontiac
+</option>
+<option value="48" >
+Porsche
+</option>
+<option value="49" >
+Renault
+</option>
+<option value="50" >
+Seat
+</option>
+<option value="51" >
+Skoda
+</option>
+<option value="52" >
+Smart
+</option>
+<option value="53" >
+Ssangyong
+</option>
+<option value="54" >
+Subaru
+</option>
+<option value="55" >
+Suzuki
+</option>
+<option value="56" >
+Toyota
+</option>
+<option value="57" >
+UFO
+</option>
+<option value="58" >
+Volkswagen
+</option>
+<option value="59" >
+Volvo
+</option>
+<option value="60" >
+Zotye
+</option>
+<option value="120" >
+Autres
+</option>
+ 
+</select>
+</div>
+ <div id="err_brand" class="error_label" style="display: none">
+<span class="msg_warning nohistory"></span>
+</div>
+ 
+</div>
+</div>  
+
+
+                
+                  <!-- param: model -->
+                     <div class="row input js-param js-model hidden " >
+<div class="col_left">
+
+<label for="model">Modèle&nbsp;:</label>
+
+
+
+</div>
+<div class="col_right">
+<div class="selectbox">
+<select name="model" id="model">
+<option value="">&#171; modèle&#187;</option>
+ 
+</select>
+</div>
+<span id="model_fixed" class="hidden"></span>
+
+<script type="text/javascript">
+$(document).ready(function(){
+ setModels();
+var model = $("#model");
+
+})
+</script>
+ <div id="err_model" class="error_label" style="display: none">
+<span class="msg_warning nohistory"></span>
+</div>
+ 
+</div>
+</div>  
+
+
+                
+                  <!-- param: rooms -->
+                     <div class="row input js-param js-rooms hidden " >
+<div class="col_left">
+
+<label for="rooms">Nombre de pièces&nbsp;:</label>
+
+
+
+</div>
+<div class="col_right">
+
+<div class="selectbox">
+<select name="rooms" id="rooms">
+<option value="">&#171;Sélectionnez&#187;</option>
+<option value="1" >1</option>
+<option value="2" >2</option>
+<option value="3" >3</option>
+<option value="4" >4</option>
+<option value="5" >5</option>
+<option value="6" >6</option>
+<option value="7" >7</option>
+<option value="8" >8</option>
+<option value="9" >9</option>
+<option value="10" >10</option>
+<option value="11" >10+</option>
+
+</select>
+</div> <div id="err_rooms" class="error_label" style="display: none">
+<span class="msg_warning nohistory"></span>
+</div>
+ 
+</div>
+</div>  
+
+
+                
+                  <!-- param: beds -->
+                     <div class="row input js-param js-beds hidden " >
+<div class="col_left">
+
+<label for="beds">Lits&nbsp;:</label>
+
+
+
+</div>
+<div class="col_right">
+<div class="selectbox">
+<select name="beds">
+<option value="">&#171;Sélectionnez&#187;</option>
+<option value="1" >1</option><option value="2" >2</option><option value="3" >3</option><option value="4" >4</option><option value="5" >5</option><option value="6" >6</option><option value="7" >7</option><option value="8" >8</option><option value="9" >9</option><option value="10" >10</option><option value="11" >Plus de 10</option>
+</select>
+</div> <div id="err_beds" class="error_label" style="display: none">
+<span class="msg_warning nohistory"></span>
+</div>
+ 
+</div>
+</div>  
+
+
+                
+                  <!-- param: size -->
+                        <div class="row input js-param js-size hidden " >
+<div class="col_left">
+
+<label for="size">Surface&nbsp;:</label>
+
+
+
+<small class="optional">(facultatif)</small>
+
+</div>
+<div class="col_right">
+
+<div class="pricebox ">
+
+
+<input name="size" id="size" size="5" maxlength="4" type="text" value="" />
+<span  class="pricebox_end ">m²</span>
+
+<select id="sizeland_suffix"  name="sizeland_suffix"   disabled class="sizeland_end  hidden">
+<option  value="m2">m2</option>
+<option  value="ha">ha</option>
+
+</select>
+</div>
+ <div id="err_size" class="error_label" style="display: none">
+<span class="msg_warning nohistory"></span>
+</div>
+ 
+</div>
+</div>  
+
+
+                
+                  <!-- param: address -->
+                       <div class="row input js-param js-address hidden " >
+<div class="col_left">
+
+<label for="address">Adresse&nbsp;:</label>
+
+
+
+<small class="optional">(facultatif)</small>
+
+</div>
+<div class="col_right">
+<input name="address" id="address" size="17" maxlength="50" type="text" value="" />
+
+
+ <div id="err_address" class="error_label" style="display: none">
+<span class="msg_warning nohistory"></span>
+</div>
+ 
+</div>
+</div>  
+
+
+                
+                  <!-- param: zipcode -->
+                     <div class="row input js-param js-zipcode hidden " >
+<div class="col_left">
+
+<label for="zipcode">Code postal&nbsp;:</label>
+
+
+
+</div>
+<div class="col_right">
+<input name="zipcode" id="zipcode" size="7" maxlength="6" type="text" value="" /> 
+ <div id="err_zipcode" class="error_label" style="display: none">
+<span class="msg_warning nohistory"></span>
+</div>
+ 
+</div>
+</div>  
+
+
+                
+                  <!-- param: country -->
+                     <div class="row input js-param js-country hidden " >
+<div class="col_left">
+
+<label for="country">Pays&nbsp;:</label>
+
+
+
+</div>
+<div class="col_right">
+ <div id="err_country" class="error_label" style="display: none">
+<span class="msg_warning nohistory"></span>
+</div>
+ 
+</div>
+</div>  
+
+
+                
+                  <!-- param: fuel -->
+                     <div class="row input js-param js-fuel hidden " >
+<div class="col_left">
+
+<label for="fuel">Type de carburant&nbsp;:</label>
+
+
+
+</div>
+<div class="col_right">
+<div class="selectbox">
+<select name="fuel" id="fuel">
+<option value="">&#171; type de carburant&#187;</option>
+<option value="1" >
+Diesel
+</option>
+<option value="2" >
+Essence
+</option>
+<option value="3" >
+Electrique
+</option>
+<option value="4" >
+LPG
+</option>
+ 
+</select>
+</div>
+ <div id="err_fuel" class="error_label" style="display: none">
+<span class="msg_warning nohistory"></span>
+</div>
+ 
+</div>
+</div>  
+
+
+                
+                  <!-- param: regdate -->
+                     <div class="row input js-param js-regdate hidden " >
+<div class="col_left">
+
+<label for="regdate">Année-Modèle&nbsp;:</label>
+
+
+
+</div>
+<div class="col_right">
+<div class="selectbox">
+<select name="regdate" id="regdate">
+<option value="">&#171; année-modèle&#187;</option>
+<option value="2014" >2014</option>
+
+<option value="2013" >2013</option>
+
+<option value="2012" >2012</option>
+
+<option value="2011" >2011</option>
+
+<option value="2010" >2010</option>
+
+<option value="2009" >2009</option>
+
+<option value="2008" >2008</option>
+
+<option value="2007" >2007</option>
+
+<option value="2006" >2006</option>
+
+<option value="2005" >2005</option>
+
+<option value="2004" >2004</option>
+
+<option value="2003" >2003</option>
+
+<option value="2002" >2002</option>
+
+<option value="2001" >2001</option>
+
+<option value="2000" >2000</option>
+
+<option value="1999" >1999</option>
+
+<option value="1998" >1998</option>
+
+<option value="1997" >1997</option>
+
+<option value="1996" >1996</option>
+
+<option value="1995" >1995</option>
+
+<option value="1994" >1994</option>
+
+<option value="1993" >1993</option>
+
+<option value="1992" >1992</option>
+
+<option value="1991" >1991</option>
+
+<option value="1990" >1990</option>
+
+<option value="1989" >1989</option>
+
+<option value="1988" >1988</option>
+
+<option value="1987" >1987</option>
+
+<option value="1986" >1986</option>
+
+<option value="1985" >1985</option>
+
+<option value="1984" >1984</option>
+
+<option value="1983" >1983</option>
+
+<option value="1982" >1982</option>
+
+<option value="1981" >1981</option>
+
+<option value="1980" >1980 ou plus ancien</option>
+
+ 
+</select>
+</div> <div id="err_regdate" class="error_label" style="display: none">
+<span class="msg_warning nohistory"></span>
+</div>
+ 
+</div>
+</div>  
+
+
+                
+                  <!-- param: mileage -->
+                     <div class="row input js-param js-mileage hidden " >
+<div class="col_left">
+
+<label for="mileage">Kilométrage&nbsp;:</label>
+
+
+
+</div>
+<div class="col_right">
+<div class="selectbox">
+<select name="mileage" id="mileage">
+<option value="">&#171; kilométrage&#187;</option>
+<option value="1" >
+0 - 4 999
+</option>
+<option value="2" >
+5 000 - 9 999
+</option>
+<option value="3" >
+10 000 - 14 999
+</option>
+<option value="4" >
+15 000 - 19 999
+</option>
+<option value="5" >
+20 000 - 24 999
+</option>
+<option value="6" >
+25 000 - 29 999
+</option>
+<option value="7" >
+30 000 - 34 999
+</option>
+<option value="8" >
+35 000 - 39 999
+</option>
+<option value="9" >
+40 000 - 44 999
+</option>
+<option value="10" >
+45 000 - 49 999
+</option>
+<option value="11" >
+50 000 - 54 999
+</option>
+<option value="12" >
+55 000 - 59 999
+</option>
+<option value="13" >
+60 000 - 64 999
+</option>
+<option value="14" >
+65 000 - 69 999
+</option>
+<option value="15" >
+70 000 - 74 999
+</option>
+<option value="16" >
+75 000 - 79 999
+</option>
+<option value="17" >
+80 000 - 84 999
+</option>
+<option value="18" >
+85 000 - 89 999
+</option>
+<option value="19" >
+90 000 - 94 999
+</option>
+<option value="20" >
+95 000 - 99 999
+</option>
+<option value="21" >
+100 000 - 109 999
+</option>
+<option value="22" >
+110 000 - 119 999
+</option>
+<option value="23" >
+120 000 - 129 999
+</option>
+<option value="24" >
+130 000 - 139 999
+</option>
+<option value="25" >
+140 000 - 149 999
+</option>
+<option value="26" >
+150 000 - 159 999
+</option>
+<option value="27" >
+160 000 - 169 999
+</option>
+<option value="28" >
+170 000 - 179 999
+</option>
+<option value="29" >
+180 000 - 189 999
+</option>
+<option value="30" >
+190 000 - 199 999
+</option>
+<option value="31" >
+200 000 - 249 999
+</option>
+<option value="32" >
+250 000 - 299 999
+</option>
+<option value="33" >
+300 000 - 349 999
+</option>
+<option value="34" >
+350 000 - 399 999
+</option>
+<option value="35" >
+400 000 - 449 999
+</option>
+<option value="36" >
+450 000 - 499 999
+</option>
+<option value="37" >
+Plus de 500 000
+</option>
+ 
+</select>
+</div>
+ <div id="err_mileage" class="error_label" style="display: none">
+<span class="msg_warning nohistory"></span>
+</div>
+ 
+</div>
+</div>  
+
+
+                
+                
+                  <!-- template: region_area -->
+                  
+<div class="row input" >
+<div class="col_left">
+
+<label for="region">Ville&nbsp;:</label>
+
+
+
+</div>
+<div class="col_right">
+
+<div class="selectbox">
+<select name="region" id="region">
+<option value="0">&laquo;Sélectionnez ville&raquo;</option>
+     
+                               
+<option value="5" 
+
+selected="selected"
+
+
+>
+ Casablanca
+</option>
+<option value="13" 
+
+
+>
+ Agadir
+</option>
+<option value="17" 
+
+
+>
+ Al Hocïema
+</option>
+<option value="14" 
+
+
+>
+ Béni Mellal
+</option>
+<option value="7" 
+
+
+>
+ El Jadida
+</option>
+<option value="18" 
+
+
+>
+ Errachidia
+</option>
+<option value="3" 
+
+
+>
+ Fès
+</option>
+<option value="4" 
+
+
+>
+ Kénitra
+</option>
+<option value="19" 
+
+
+>
+ Khénifra
+</option>
+<option value="1" 
+
+
+>
+ Khouribga
+</option>
+<option value="20" 
+
+
+>
+ Larache
+</option>
+<option value="8" 
+
+
+>
+ Marrakech
+</option>
+<option value="9" 
+
+
+>
+ Meknès
+</option>
+<option value="21" 
+
+
+>
+ Nador
+</option>
+<option value="22" 
+
+
+>
+ Ouarzazate
+</option>
+<option value="10" 
+
+
+>
+ Oujda
+</option>
+<option value="12" 
+
+
+>
+ Rabat
+</option>
+<option value="2" 
+
+
+>
+ Safi
+</option>
+<option value="23" 
+
+
+>
+ Settat
+</option>
+<option value="6" 
+
+
+>
+ Salé
+</option>
+<option value="15" 
+
+
+>
+ Tanger
+</option>
+<option value="16" 
+
+
+>
+ Taza
+</option>
+<option value="11" 
+
+
+>
+ Tétouan
+</option>
+
+<option value="other" style="color: red">Choisir une autre ville...</option>
+</select>
+</div>
+<div id="err_region" class="error_label" style="display: none">
+<span class="msg_warning nohistory"></span>
+</div>
+
+<p id="region_tips" class="msg_warning hidden">
+
+</p>
+
+
+</div>
+</div>
+
+
+
+
+  <div class="row hidden input" id="area_inputs">
+<div class="col_left">
+
+<label for="area">Secteur&nbsp;:</label>
+
+
+
+</div>
+<div class="col_right">
+<div class="selectbox">
+<select id="area" name="area">
+<option value="">&#171;Sélectionnez secteur&#187;</option>
+
+</select>
+</div>
+<span id="area_fixed" class="hidden"></span>
+<div id="info_area" class="msg_warning hidden"></div>
+<div id="err_area" class="error_label" style="display: none">
+<span class="msg_warning nohistory"></span>
+</div>
+
+
+
+</div>
+</div>
+
+
+
+                
+                
+                
+                  <!-- template: subject -->
+                  
+<div class="row input subject" >
+<div class="col_left">
+
+<label for="subject">Titre&nbsp;:</label>
+
+
+
+</div>
+<div class="col_right">
+<div id="tooltip-subject" class="tooltip-wrapper hidden">
+<div class="tooltip">
+<div class="tooltip-tipleft"></div>
+<span class="tooltip-close">×</span>
+<p class="tooltip-content">
+      
+</p>
+</div>
+</div>
+
+
+<!--  <link rel="stylesheet" type="text/css" href="/css/designs/blocket/modules/keyboard" />
+<script type="text/javascript" src= charset="UTF-8">VKI_buildKeyboardInputs()</script> -->
+
+
+<input type="text" id="subject" name="subject" size="47" maxlength="50" value=""/>
+
+<p id="subject_info" class="hidden Info last">
+ le titre ne doit pas contenir les termes "A vendre", "Vente", "Offre" ou "Demande"
+</p>
+<div id="err_subject" class="error_label" style="display: none">
+<span class="msg_warning nohistory"></span>
+</div>
+
+<div class="msg_warning hidden">
+
+</div>
+
+</div>
+</div>
+
+
+
+
+                
+                
+                
+                  <!-- template: body -->
+                  <div class="row input" >
+<div class="col_left">
+
+<label for="body">Texte de l'annonce&nbsp;:</label>
+<small class="input_count">(<span id="body_count"></span>)</small>
+
+
+</div>
+<div class="col_right">
+<textarea cols="45" rows="10" name="body" id="body" maxlength="2000"></textarea>
+
+<small class="hidden" class="body_count" id="body_count"></small>
+
+<div id="err_body" class="error_label" style="display: none">
+<span class="msg_warning nohistory"></span>
+</div>
+
+<div id="tooltip-body" class="tooltip-wrapper hidden">
+<div class="tooltip">
+<div class="tooltip-tipleft"></div>
+<span class="tooltip-close">×</span>
+<p class="tooltip-content">
+      
+</p>
+</div>
+</div>
+
+<div id="body_warning" class="msg_warning hidden">
+
+</div>
+<script type="text/javascript" charset="utf-8">
+jQuery(function() {
+bindBody();
+});
+</script>
+
+
+</div>
+</div>
+                
+                
+                
+                  <!-- template: price -->
+                  <div class="row input" >
+<div class="col_left">
+
+<label for="price">Prix&nbsp;:</label>
+
+
+
+<small class="optional">(facultatif)</small>
+
+</div>
+<div class="col_right">
+<div class="pricebox_no_zeroes">
+
+
+
+<input name="price" size="12" maxlength="10" value="" id="price" type="text" />
+
+<div id="tooltip-price" class="tooltip-wrapper hidden">
+<div class="tooltip">
+<div class="tooltip-tipleft"></div>
+<span class="tooltip-close">×</span>
+<p class="tooltip-content">
+      
+</p>
+</div>
+</div>
+
+
+
+<span class="suffix">&nbsp;&nbsp;&nbsp;DH</span>
+
+
+
+</div>
+ 
+
+ 
+<div id="err_price" class="error_label" style="display: none">
+<span class="msg_warning nohistory"></span>
+</div>
+
+
+
+
+</div>
+</div>
+
+
+                
+                
+                
+                  <!-- template: images -->
+                  <h2 class="newadheading">Ajouter jusqu&#39;a 6 photos</h2>
+
+<div class="row input images" >
+<div class="col_left">
+
+<label for="image">Photo&nbsp;:</label>
+
+
+
+<small class="optional">(facultatif)</small>
+
+</div>
+<div class="col_right">
+
+    <div class="aiupload-start">
+        <span class="aiupload-introtext">Une annonce avec photo est 7 fois plus consultée qu'une annonce sans photo.</span>
+        <div class="aiupload-left">
+            <input id="imageupload" type="file" name="images[]" accept="image/jpeg,image/gif,image/png,image/bmp" data_url="/ai/upload_images/0" multiple="">
+            <div class="aiupload-add-image-wrap">
+                <i class="sprite_ai_add-images"></i>
+            </div>
+            <span class="button-gold">
+                Ajouter des  photos
+            </span>
+        </div>
+        <div class="aiupload-right">
+            <i class="sprite_ai_add-infobox-arrow infobox-arrow"></i>
+            <i class="sprite_ai_ai-images ai-images"></i>
+            <div class="aiupload-cloud">
+                <span>Utilisez une <strong>vraie photo de votre objet</strong>, et non des photos d'Internet.</span>
+            </div>
+        </div>
+    </div>
+
+    
+   <div class="error_label" id="err_load_image">
+           <span class="msg_error type hidden">Votre photo n'est pas au format jpg, gif ou bmp. <br> Modifiez le type de fichier de votre photo et essayez à nouveau. <br> En cas de nouvel échec, envoyez la photo par mail au <a href=http://www.bikhir.ma/fr/aide.htm target=_blank>service clients</a>.</span>
+           <span class="msg_error size hidden">Le format de la photo n&#39;est pas conforme</span>
+           <span class="msg_error size_small hidden">Votre photo est trop petite.</span>
+           <span class="msg_error count hidden">Le nombre d'images que vous avez selectionner est superieur au nombre maximum autorisé</span>
+           <span class="msg_error unknown hidden">Une erreur s'est produite lors du chargement de la photo. Essayez à nouveau. <br> En cas de nouvel échec, envoyez la photo par mail au <a href=http://www.bikhir.ma/fr/aide.htm target=_blank>service clients</a>.</span>
+    </div>
+
+    
+    <div class="image_previews_container">
+        
+    </div>
+    <div class="progress-bar hidden">
+        <div class="bar"></div>
+        <div class="progress"></div>
+    </div>
+    <span class="hidden button-gold button-large aiupload-button-bottom">
+        <i class="sprite_ai_button-gold-arrow"></i>
+        Ajouter une autre photo
+    </span>    
+
+</div>
+</div>
+<script type="text/javascript">
+    // Initiate ImageUploader script
+    $(function() {
+        window.ImageUpload.setup('http://content.bikhir.ma/thumbs/', 0, 7, "Principale", "Photo Principale","");
+    });
+</script>
+
+                
+                
+                
+                  <!-- heading: NEWAD_HEADING_SELLER_CONTACT -->
+                  <h2 class="newadheading">
+                    Vos informations
+                  </h2>
+                
+                
+                  <!-- template: company_ad_toggler -->
+                  
+<div class="row " >
+<div class="col_left">
+
+<label>Vous êtes un :</label>
+
+
+
+</div>
+<div class="col_right">
+<input id="p_ad" name="company_ad" value="0" checked="checked" type="radio" />
+<label for="p_ad">Particulier</label>&nbsp;&nbsp;
+<input id="c_ad" name="company_ad" value="1"  type="radio" />
+<label for="c_ad">Professionnel</label>
+
+
+
+</div>
+</div>
+
+                
+                
+                
+                  <!-- template: name -->
+                  
+
+<div class="row input" >
+<div class="col_left">
+
+<label for="name">Nom&nbsp;:</label>
+
+
+
+</div>
+<div class="col_right">
+<input id="name" name="name" size="35" maxlength="50" value="" type="text">
+<div id="err_name" class="error_label" style="display: none">
+<span class="msg_warning nohistory"></span>
+</div>
+
+
+
+
+</div>
+</div>
+                
+                
+                
+                  <!-- template: email -->
+                  
+<div class="row input" >
+<div class="col_left">
+
+<label for="email">E-mail&nbsp;:</label>
+
+
+
+</div>
+<div class="col_right">
+<input name="email" type="email" id="email" value="" size="35" maxlength="60" />
+<p id="email_info" class="hidden Info last">L'adresse e-mail ne figure pas dans l'annonce</p>
+<div id="err_email" class="error_label" style="display: none">
+<span class="msg_warning nohistory"></span>
+</div>
+
+
+
+</div>
+</div>
+  
+
+                
+                
+                
+                  <!-- template: company_ad -->
+                  
+
+                
+                
+                
+                  <!-- template: phone -->
+                  
+<div class="row input" >
+<div class="col_left">
+
+<label for="phone">Téléphone&nbsp;:</label>
+
+
+
+</div>
+<div class="col_right">
+<input id="phone" name="phone" size="17" maxlength="50" value="" type="text" />
+<div id="phone_info">
+<input id="phone_hidden" name="phone_hidden" value="1" type="checkbox"  />
+<label for="phone_hidden">Masquer le numéro de téléphone dans l'annonce</label>
+</div>
+<div id="err_phone" class="error_label" style="display: none">
+<span class="msg_warning nohistory"></span>
+</div>
+
+
+</div>
+</div>
+
+
+                
+                
+                
+                  <!-- template: company_license_notice -->
+                  
+
+
+                
+                
+                
+                  <!-- template: password -->
+                  
+<span id='passwrd_contner' >
+  <div class="row input" >
+<div class="col_left">
+
+<label for="password">Mot de passe&nbsp;:</label>
+
+
+
+</div>
+<div class="col_right">
+<input type="password" name="passwd" id="passwd" maxlength="30" autocomplete="off" value="" />
+<span class="space_span">(au moins 5 caractères)<br /></span>
+<div id="err_passwd" class="error_label" style="display: none">
+<span class="msg_warning nohistory"></span>
+</div>
+
+
+</div>
+</div>
+</span>
+
+
+                
+                
+                
+                  <!-- template: submit -->
+                  <div class="row " >
+<div class="col_left">
+&nbsp;
+
+
+</div>
+<div class="col_right">
+
+
+
+<p>En validant mon annonce, j'accepte les <span class="nohistory">
+<a href="javascript:void(0);" onClick="window.open('http://www.bikhir.ma/règlement.htm?ca=5','Rules','toolbar=yes, location=yes, status=yes, scrollbars=yes, resizable=yes, width=850, height=600')">
+<strong>
+Règles d'utilisation</strong></a></span> du site Bikhir.ma, et j'autorise Bikhir.ma à diffuser mon annonce.</p>
+
+
+
+
+
+
+
+<input id="validate" name="validate" type="submit" value="Déposez votre annonce" />
+<div id="loading" class="progressBar hidden">Patienter<span id="loading_dots"></span></div>
+
+<!--  <div class="row buttons" >
+<div class="col_left">
+&nbsp;
+
+
+</div>
+<div class="col_right">
+<input type="submit" class="preset" value="Déposer l'annonce" name="create" onclick="return ai_submit_handler.handle_preview_submit(this);">
+<div id="loading" class="hidden progressBar">
+Patienter<span id="loading_dots"></span>
+</div>
+
+</div>
+</div>
+-->
+  
+<!-- -->
+
+
+</div>
+</div>
+
+<!--  <script type="text/javascript">
+  register_events(jsevents.ai, document);
+  
+</script>
+-->
+                
+                
+              
+              
+            </div>
+          </div>
+        </section>
+      </div>
 
 <hr/>
 
